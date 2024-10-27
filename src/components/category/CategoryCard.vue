@@ -6,7 +6,7 @@ withDefaults(defineProps<CategoryCartProps>(), {
 </script>
 
 <template>
-    <div class="bg-white shadow-md rounded-lg p-4">
+    <div class="bg-white shadow-md rounded-lg p-4" v-tooltip="{content: '<i>'+item.name+'</i>', html: true, trigger: 'hover'}">
         <router-link :to="`/category/${item.id}`">
             <figure>
                 <img class="aspect-square" :src="item.image" :alt="item.name"/>
